@@ -32,5 +32,11 @@
             <groupId>javax.persistence</groupId>
             <artifactId>javax.persistence-api</artifactId>
         </dependency>
+        <dependency>
+            <groupId>br.edu.imepac</groupId>
+            <artifactId>clinica-commons</artifactId>
+            <version>1.0-SNAPSHOT</version>
+
+        </dependency>
     </dependencies>
 </project>
