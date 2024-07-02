@@ -1,6 +1,6 @@
-package br.edu.imepac.model;
+package br.edu.imepac.commons.model;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDateTime;
@@ -14,11 +14,11 @@ public class ConsultaModel {
 
     @ManyToOne
     @JoinColumn(name = "medico_id")
-    private Medico medico;
+    private MedicoModel medico;
 
     @ManyToOne
     @JoinColumn(name = "paciente_id")
-    private Paciente paciente;
+    private PacienteModel paciente;
 
     private LocalDateTime data;
     private String localizacao;

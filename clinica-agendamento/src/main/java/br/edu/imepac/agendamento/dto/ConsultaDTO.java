@@ -1,4 +1,4 @@
-package br.edu.imepac.dtos;
+package br.edu.imepac.commons.dto;
 
 import java.time.LocalDateTime;
 import lombok.Data;
