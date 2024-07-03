@@ -30,3 +30,18 @@ spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 3. Acesso ao localhost:8080, confirmando o ativamento dos módulos pela mensagem de sucesso:
 
  ![Screenshot_165](https://github.com/pl050904444/clinica-medica/assets/130000947/4ae622a5-87b8-4adf-b19a-2a2d5dd803b6)
+
+
+ ## Uso
+Utilizar uma API REST: Postman, HTTPie, Insomnia.
+ 
+Confirmar o endereço do recurso, no formato localhost:[porta]/api/[recurso]
+Exemplo: localhost:8083/api/pacientes //Onde a porta 8083 se refere ao Mód. Administrativo, que gera recursos como Pacientes.
+
+A requisição deve ser feita no formato Raw -> JSON, conforme exemplo abaixo (utilizando Postman)
+![image](https://github.com/pl050904444/clinica-medica/assets/130000947/459a0d9f-7eb5-4578-8021-573d6970c908)
+
+200 - OK
+201 - Recurso Criado
+204 - Recurso Atualizado
+404 - Não encontrado
