@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Medicos Cadastrados</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa; /* Medical-blue background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #ffffff; /* Darker white for the box */
+            padding: 20px;
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%; /* Slightly smaller than the background page */
+            max-width: 800px;
+        }
+        h1 {
+            text-align: center;
+            color: #00796b; /* Darker shade of medical-blue */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+        }
+        th {
+            background-color: #b2dfdb; /* Lighter shade of medical-blue */
+            text-align: left;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #e0f2f1;
+        }
+        .actions a {
+            margin-right: 10px;
+            color: #00796b; /* Darker shade of medical-blue */
+            text-decoration: none;
+        }
+        .actions a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Medicos Cadastrados</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>CRM</th>
+            <th>Especialidade</th>
+            <th>Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="medico : ${medicos}">
+            <td th:text="${medico.id}">1</td>
+            <td th:text="${medico.nome}">Nome</td>
+            <td th:text="${medico.crm}">CRM</td>
+            <td th:text="${medico.especialidadeId}">Especialidade</td>
+            <td class="actions">
+                <a th:href="@{/medicos/edit/{id}(id=${medico.id})}">Editar</a>
+                <a th:href="@{/medicos/delete/{id}(id=${medico.id})}">Excluir</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
