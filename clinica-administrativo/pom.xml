@@ -1,42 +1,62 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
+    <!-- Inherit from the parent -->
     <parent>
         <groupId>br.edu.imepac</groupId>
         <artifactId>clinica-medica</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>clinica-administrativo</artifactId>
-    <name>Archetype - clinica-administrativo</name>
-    <url>http://maven.apache.org</url>
-    <packaging>jar</packaging>
 
+    <!-- Define the artifact ID for this module -->
+    <artifactId>clinica-administrativo</artifactId>
+    <name>Module - clinica-administrativo</name>
+    <url>http://maven.apache.org</url>
+
+    <!-- Dependencies specific to clinica-administrativo -->
     <dependencies>
+        <!-- Example: Spring Boot Starter Web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
+
+        <!-- Example: Lombok (if needed) -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
+
+        <!-- Example: Jakarta Persistence API -->
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
         </dependency>
+
+        <!-- Example: Spring Data JPA -->
         <dependency>
-            <groupId>javax.persistence</groupId>
-            <artifactId>javax.persistence-api</artifactId>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-jpa</artifactId>
+        </dependency>
+
+        <!-- Example: Spring Boot Starter Logging (includes SLF4J with Logback) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-logging</artifactId>
         </dependency>
         <dependency>
             <groupId>br.edu.imepac</groupId>
             <artifactId>clinica-commons</artifactId>
             <version>1.0-SNAPSHOT</version>
-
+            <scope>compile</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
     </dependencies>
 </project>
